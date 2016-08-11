@@ -23,14 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/myschool/htdocs/';
+$config['base_url'] = 'http://localhost:8888/myschool/htdocs/';
 
 /*
 |--------------------------------------------------------------------------
 | Index File
 |--------------------------------------------------------------------------
 |
-| Typically this will be your index.php file, unless you've renamed it to
+| Typically this will be your index.php file, unless	 you've renamed it to
 | something else. If you are using mod_rewrite to remove the page set this
 | variable so that it is blank.
 |

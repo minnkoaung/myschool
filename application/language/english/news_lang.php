@@ -4,49 +4,41 @@
  */
 
 // Titles
-$lang['properties title forgot']                   = "Forgot Password";
-$lang['properties title login']                    = "Login";
-$lang['properties title profile']                  = "Profile";
-$lang['properties title register']                 = "Register";
-$lang['properties title property_add']             = "Add User";
-$lang['properties title property_delete']          = "Confirm Delete User";
-$lang['properties title property_edit']            = "Edit User";
-$lang['properties title property_list']            = "Property List";
+$lang['properties title news_add']             = "Add News";
+$lang['properties title news_delete']          = "Delete News";
+$lang['properties title news_edit']            = "Edit News";
+$lang['news title news_list']            	   = "News List";
+$lang['news title news_delete']            	   = "Delete News";
 
 // Buttons
-$lang['properties button add_new_property']        = "Add New Property";
-$lang['properties button register']                = "Create Account";
-$lang['properties button reset_password']          = "Reset Password";
-$lang['properties button login_try_again']         = "Try Again";
+$lang['news button add_news']        = " Add News";
+$lang['news button delete_news']     = " Delete News";
 
 // Tooltips
 $lang['properties tooltip add_new_property']           = "Create a brand new property.";
+$lang['news tooltip add_news']           = "Create a most updated news.";
 
 // Links
 $lang['properties link forgot_password']           = "Forgot your password?";
 $lang['properties link register_account']          = "Register for an account.";
 
 // Table Columns
-$lang['properties col type']                 = "Type";
-$lang['properties col is_admin']                   = "Admin";
-$lang['properties col price']                  = "Price";
-$lang['properties col property_id']                    = "ID";
-$lang['properties col title']                   = "Title";
+$lang['news col news_id']             = "News ID";
+$lang['news col title']                   = "News Title";
+$lang['news col description']             = "News Description";
+$lang['news col photo']                   = "News Picture";
+$lang['news col photo_url']               = "News Photo URL";
 
 // Form Inputs
-$lang['properties input email']                    = "Email";
-$lang['properties input address']               = "Address";
-$lang['properties input is_featured']                 = "Is Featured";
-$lang['properties input type']                 = "Type";
-$lang['properties input area']                 = "Area";
-$lang['properties input bedrooms']                = "Bedrooms";
-$lang['properties input bathrooms']                = "Bathrooms";
-$lang['properties input price']                = "Price";
-$lang['properties input description']                 = "Description";
-$lang['properties input township_id']          = "Township";
-$lang['properties input region_id']                   = "Regions";
-$lang['properties input title']                 = "Title";
-$lang['properties input username_email']           = "Username or Email";
+$lang['news input address']               = "Address";
+$lang['news input type']                 = "Type";
+$lang['news input area']                 = "Area";
+$lang['news input bedrooms']                = "Bedrooms";
+$lang['news input bathrooms']                = "Bathrooms";
+$lang['news input price']                = "Price";
+$lang['news input description']           = "News Description";
+$lang['news input title']                 = "News Title";
+
 
 // Help
 $lang['properties help passwords']                 = "Only enter passwords if you want to change it.";

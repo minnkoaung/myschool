@@ -45,6 +45,8 @@
                 <?php // Nav bar left ?>
                 <ul class="nav navbar-nav">
                     <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/dashboard') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin'); ?>"><?php echo lang('admin button dashboard'); ?></a></li>
+                    <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/news') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin/news'); ?>"><?php echo lang('admin button news'); ?></a></li>
+
                     <li class="dropdown<?php echo (strstr(uri_string(), 'admin/users')) ? ' active' : ''; ?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo lang('admin button users'); ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -140,7 +142,7 @@
         </div>
     </footer>
 
-    <?php // Javascript files ?>
+     <?php // Javascript files ?>
     <?php if (isset($js_files) && is_array($js_files)) : ?>
         <?php foreach ($js_files as $js) : ?>
             <?php if ( ! is_null($js)) : ?>

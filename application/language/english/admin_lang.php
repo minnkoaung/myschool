@@ -22,6 +22,7 @@ $lang['admin button proerties_list']      = "List Properties";
 $lang['admin button locations_list']      = "List Locations";
 $lang['admin button types_list']          = "List Types";
 $lang['admin button agents_list']         = "List Agents";
+$lang['admin button news']         		= "News";
 
 // Tooltips
 $lang['admin tooltip csv_export']         = "Export a CSV file of all results with filters applied.";

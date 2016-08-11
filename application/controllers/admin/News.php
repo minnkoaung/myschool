@@ -47,7 +47,7 @@ class News extends Admin_Controller {
 
 
     /**
-     * User list page
+     * news list page
      */
     public function index()
     {
@@ -63,6 +63,16 @@ class News extends Admin_Controller {
         if ($this->input->get('news_title'))
         {
             $filters['news_title'] = $this->input->get('news_title', TRUE);
+        }
+
+        if ($this->input->get('type'))
+        {
+            $filters['type'] = $this->input->get('type', TRUE);
+        }
+
+        if ($this->input->get('price'))
+        {
+            $filters['price'] = $this->input->get('price', TRUE);
         }
 
         // build filter string
@@ -90,7 +100,17 @@ class News extends Admin_Controller {
 
                 if ($this->input->post('title'))
                 {
-                    $filter .= "&title=" . $this->input->post('news_title', TRUE);
+                    $filter .= "&title=" . $this->input->post('title', TRUE);
+                }
+
+                if ($this->input->post('type'))
+                {
+                    $filter .= "&type=" . $this->input->post('type', TRUE);
+                }
+
+                if ($this->input->post('price'))
+                {
+                    $filter .= "&price=" . $this->input->post('price', TRUE);
                 }
 
                 // redirect using new filter(s)
@@ -99,26 +119,26 @@ class News extends Admin_Controller {
         }
 
         // get list
-        $properties = $this->news_model->get_all($limit, $offset, $filters, $sort, $dir);
+        $news = $this->news_model->get_all($limit, $offset, $filters, $sort, $dir);
 
         // build pagination
         $this->pagination->initialize(array(
             'base_url'   => THIS_URL . "?sort={$sort}&dir={$dir}&limit={$limit}{$filter}",
-            'total_rows' => $properties['total'],
+            'total_rows' => $news['total'],
             'per_page'   => $limit
         ));
 
         // setup page header data
-		$this
-			->add_js_theme( "users_i18n.js", TRUE )
-			->set_title( lang('users title user_list') );
+        $this
+            ->add_js_theme( "users_i18n.js", TRUE )
+            ->set_title( lang('users title user_list') );
 
         $data = $this->includes;
 
         // set content data
         $content_data = array(
             'this_url'   => THIS_URL,
-            'news'      => $news['results'],
+            'news' => $news['results'],
             'total'      => $news['total'],
             'filters'    => $filters,
             'filter'     => $filter,
@@ -142,8 +162,8 @@ class News extends Admin_Controller {
     {
         // validators
         $this->form_validation->set_error_delimiters($this->config->item('error_delimeter_left'), $this->config->item('error_delimeter_right'));
-        $this->form_validation->set_rules('title', lang('properties input title'), 'required');
-        $this->form_validation->set_rules('description', lang('properties input description'), 'required');
+        $this->form_validation->set_rules('news_title', lang('news input title'), 'required');
+        $this->form_validation->set_rules('news_description', lang('news input description'), 'required');
         $this->form_validation->set_rules('type', lang('properties input type'), 'required');
         $this->form_validation->set_rules('price', lang('properties input price'), 'required');
         $this->form_validation->set_rules('address', lang('properties input address'), 'required');
